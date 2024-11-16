@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>~\Image\slider2.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+		<Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+
+    <Ad>
+		<ImageUrl>~\Image\slider3.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+	    <Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+
+    <Ad>
+		<ImageUrl>~\Image\slider4.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+	    <Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+
+<Ad>
+		<ImageUrl>~\Image\slider5.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+	    <Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+
+<Ad>
+		<ImageUrl>~\Image\slider6.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+	    <Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+
+<Ad>
+		<ImageUrl>~\Image\slider7.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+	    <Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+
+<Ad>
+		<ImageUrl>~\Image\imgslider1.jpg</ImageUrl>
+		<AlternateText>OMG</AlternateText>
+		<NavigateUrl></NavigateUrl>
+	    <Height>400px</Height>
+		<Width>1200px</Width>
+	</Ad>
+</Advertisements>
+
+

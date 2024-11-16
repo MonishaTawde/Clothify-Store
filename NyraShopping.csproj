@@ -1,0 +1,625 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2E66836-C1E5-4150-97E6-F34FF9676404}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NyraShopping</RootNamespace>
+    <AssemblyName>NyraShopping</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Razorpay, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Razorpay.2.2.0\lib\net45\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdXml.xml" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-grid.rtl.css" />
+    <Content Include="css\bootstrap-grid.rtl.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap-reboot.rtl.css" />
+    <Content Include="css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="css\bootstrap-utilities.css" />
+    <Content Include="css\bootstrap-utilities.min.css" />
+    <Content Include="css\bootstrap-utilities.rtl.css" />
+    <Content Include="css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.rtl.css" />
+    <Content Include="css\bootstrap.rtl.min.css" />
+    <Content Include="css\Custome.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\3\Tartan Checks Opaque Checked Casual Shirt01.jpg" />
+    <Content Include="Images\3\Tartan Checks Opaque Checked Casual Shirt02.jpg" />
+    <Content Include="Images\3\Tartan Checks Opaque Checked Casual Shirt03.jpg" />
+    <Content Include="Images\3\Tartan Checks Opaque Checked Casual Shirt04.jpg" />
+    <Content Include="Images\3\Tartan Checks Opaque Checked Casual Shirt05.jpg" />
+    <Content Include="Images\4\Tartan Checks Opaque Checked Casual Shirt01.jpg" />
+    <Content Include="Images\4\Tartan Checks Opaque Checked Casual Shirt02.jpg" />
+    <Content Include="Images\4\Tartan Checks Opaque Checked Casual Shirt03.jpg" />
+    <Content Include="Images\4\Tartan Checks Opaque Checked Casual Shirt04.jpg" />
+    <Content Include="Images\4\Tartan Checks Opaque Checked Casual Shirt05.jpg" />
+    <Content Include="Images\5\Women Purple Ethnic Motifs Embroidered Mirror Work Kurta with Trousers &amp; Dupatta01.jpg" />
+    <Content Include="Images\5\Women Purple Ethnic Motifs Embroidered Mirror Work Kurta with Trousers &amp; Dupatta02.jpg" />
+    <Content Include="Images\5\Women Purple Ethnic Motifs Embroidered Mirror Work Kurta with Trousers &amp; Dupatta03.jpg" />
+    <Content Include="Images\5\Women Purple Ethnic Motifs Embroidered Mirror Work Kurta with Trousers &amp; Dupatta04.jpg" />
+    <Content Include="Images\5\Women Purple Ethnic Motifs Embroidered Mirror Work Kurta with Trousers &amp; Dupatta05.jpg" />
+    <Content Include="Images\ProductImages\1\p1a.jpg" />
+    <Content Include="Images\ProductImages\1\p1b.jpg" />
+    <Content Include="Images\ProductImages\1\p1c.jpg" />
+    <Content Include="Images\ProductImages\1\p1d.jpg" />
+    <Content Include="Images\ProductImages\1\p1e.jpg" />
+    <Content Include="Images\ProductImages\1\p1f.jpg" />
+    <Content Include="Images\ProductImages\2\Puff Sleeve Fit &amp; Flare Dress01.jpg" />
+    <Content Include="Images\ProductImages\2\Puff Sleeve Fit &amp; Flare Dress02.jpg" />
+    <Content Include="Images\ProductImages\2\Puff Sleeve Fit &amp; Flare Dress03.jpg" />
+    <Content Include="Images\ProductImages\2\Puff Sleeve Fit &amp; Flare Dress04.jpg" />
+    <Content Include="Images\ProductImages\2\Puff Sleeve Fit &amp; Flare Dress05.jpg" />
+    <Content Include="Image\1.jpg" />
+    <Content Include="Image\2.jpg" />
+    <Content Include="Image\3.jpg" />
+    <Content Include="Image\Adminbg.jpg" />
+    <Content Include="Image\back.jpg" />
+    <Content Include="Image\bg.jpg" />
+    <Content Include="Image\bg1.jpg" />
+    <Content Include="Image\bgnd.jpg" />
+    <Content Include="Image\brg3.jpg" />
+    <Content Include="Image\dbgnd.jpg" />
+    <Content Include="Image\download.jpeg" />
+    <Content Include="Image\hbl.jpg" />
+    <Content Include="Image\imgslider1.jpg" />
+    <Content Include="Image\kids.jpg" />
+    <Content Include="Image\logo.jpg" />
+    <Content Include="Image\logo1.jpg" />
+    <Content Include="Image\men.jpg" />
+    <Content Include="Image\p1a.jpg" />
+    <Content Include="Image\p1b.jpg" />
+    <Content Include="Image\p1c.jpg" />
+    <Content Include="Image\p1d.jpg" />
+    <Content Include="Image\p1e.jpg" />
+    <Content Include="Image\p2%281%29.jpg" />
+    <Content Include="Image\p2%282%29.jpg" />
+    <Content Include="Image\p2%283%29.jpg" />
+    <Content Include="Image\slider2.jpg" />
+    <Content Include="Image\slider3.jpg" />
+    <Content Include="Image\suit-ind.jpg" />
+    <Content Include="Image\cartimg.jpg" />
+    <Content Include="Image\cartimg1.jpg" />
+    <Content Include="Image\cartimg2.jpg" />
+    <Content Include="Image\cartimg3.jpg" />
+    <Content Include="Image\cartimg4.jpg" />
+    <Content Include="Image\poster.jpg" />
+    <Content Include="Image\skin.jpg" />
+    <Content Include="Image\favicon.jpg" />
+    <Content Include="Image\favicon1.jpg" />
+    <Content Include="Image\slider4.jpg" />
+    <Content Include="Image\slider5.jpg" />
+    <Content Include="Image\slider6.jpg" />
+    <Content Include="Image\slider7.jpg" />
+    <Content Include="Image\cart.jpg" />
+    <Content Include="Image\cart1.jpg" />
+    <Content Include="Image\infinity.jpg" />
+    <Content Include="Image\redheart.jpg" />
+    <Content Include="Image\about.jpg" />
+    <Content Include="Image\wl.jpeg" />
+    <Content Include="Image\women.jpg" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.esm.js" />
+    <Content Include="js\bootstrap.esm.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="Root\About.aspx" />
+    <Content Include="Root\AddBrand.aspx" />
+    <Content Include="Root\AddCategory.aspx" />
+    <Content Include="Root\AddGender.aspx" />
+    <Content Include="Root\AddProduct.aspx" />
+    <Content Include="Root\AddSize.aspx" />
+    <Content Include="Root\AddtoWishList.aspx" />
+    <Content Include="Root\AdminAbout.aspx" />
+    <Content Include="Root\AdminHome.aspx" />
+    <Content Include="Root\BottomWear.aspx" />
+    <Content Include="Root\BoysSets.aspx" />
+    <Content Include="Root\Cart.aspx" />
+    <Content Include="Root\ContactUs.aspx" />
+    <Content Include="Root\Default.aspx" />
+    <Content Include="Root\EditBrand.aspx" />
+    <Content Include="Root\EditCategory.aspx" />
+    <Content Include="Root\EditSize.aspx" />
+    <Content Include="Root\EditSubCategory.aspx" />
+    <Content Include="Root\Ethnic.aspx" />
+    <Content Include="Root\ForgotPassword.aspx" />
+    <Content Include="Root\GirlsSets.aspx" />
+    <Content Include="Root\Kids.aspx" />
+    <Content Include="Root\KurtaSets.aspx" />
+    <Content Include="Root\Men.aspx" />
+    <Content Include="Root\NightDress.aspx" />
+    <Content Include="Root\Payment.aspx" />
+    <Content Include="Root\ProductReport.aspx" />
+    <Content Include="Root\Products.aspx" />
+    <Content Include="Root\ProductView.aspx" />
+    <Content Include="Root\RecoverPassword.aspx" />
+    <Content Include="Root\Report.aspx" />
+    <Content Include="Root\Sarees.aspx" />
+    <Content Include="Root\SignIn.aspx" />
+    <Content Include="Root\SignUp.aspx" />
+    <Content Include="Root\SubCategory.aspx" />
+    <Content Include="Root\Success.aspx" />
+    <Content Include="Root\TopWear.aspx" />
+    <Content Include="Root\UserHome.aspx" />
+    <Content Include="Root\Western.aspx" />
+    <Content Include="Image\infinity2.jpg" />
+    <Content Include="Root\Wishlist.aspx" />
+    <Content Include="Root\Women.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Models\WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AddBrand.aspx.cs">
+      <DependentUpon>AddBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AddBrand.aspx.designer.cs">
+      <DependentUpon>AddBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AddGender.aspx.cs">
+      <DependentUpon>AddGender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AddGender.aspx.designer.cs">
+      <DependentUpon>AddGender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AddSize.aspx.cs">
+      <DependentUpon>AddSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AddSize.aspx.designer.cs">
+      <DependentUpon>AddSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AddtoWishList.aspx.cs">
+      <DependentUpon>AddtoWishList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AddtoWishList.aspx.designer.cs">
+      <DependentUpon>AddtoWishList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AdminAbout.aspx.cs">
+      <DependentUpon>AdminAbout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AdminAbout.aspx.designer.cs">
+      <DependentUpon>AdminAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\AdminMasterPage.Master.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AdminMasterPage.Master.designer.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Root\BottomWear.aspx.cs">
+      <DependentUpon>BottomWear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\BottomWear.aspx.designer.cs">
+      <DependentUpon>BottomWear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\BoysSets.aspx.cs">
+      <DependentUpon>BoysSets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\BoysSets.aspx.designer.cs">
+      <DependentUpon>BoysSets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\EditBrand.aspx.cs">
+      <DependentUpon>EditBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\EditBrand.aspx.designer.cs">
+      <DependentUpon>EditBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\EditCategory.aspx.cs">
+      <DependentUpon>EditCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\EditCategory.aspx.designer.cs">
+      <DependentUpon>EditCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\EditSize.aspx.cs">
+      <DependentUpon>EditSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\EditSize.aspx.designer.cs">
+      <DependentUpon>EditSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\EditSubCategory.aspx.cs">
+      <DependentUpon>EditSubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\EditSubCategory.aspx.designer.cs">
+      <DependentUpon>EditSubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Ethnic.aspx.cs">
+      <DependentUpon>Ethnic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Ethnic.aspx.designer.cs">
+      <DependentUpon>Ethnic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\GirlsSets.aspx.cs">
+      <DependentUpon>GirlsSets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\GirlsSets.aspx.designer.cs">
+      <DependentUpon>GirlsSets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Kids.aspx.cs">
+      <DependentUpon>Kids.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Kids.aspx.designer.cs">
+      <DependentUpon>Kids.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\KurtaSets.aspx.cs">
+      <DependentUpon>KurtaSets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\KurtaSets.aspx.designer.cs">
+      <DependentUpon>KurtaSets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Men.aspx.cs">
+      <DependentUpon>Men.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Men.aspx.designer.cs">
+      <DependentUpon>Men.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\NightDress.aspx.cs">
+      <DependentUpon>NightDress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\NightDress.aspx.designer.cs">
+      <DependentUpon>NightDress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ProductReport.aspx.cs">
+      <DependentUpon>ProductReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ProductReport.aspx.designer.cs">
+      <DependentUpon>ProductReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ProfileMasterPage.Master.cs">
+      <DependentUpon>ProfileMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ProfileMasterPage.Master.designer.cs">
+      <DependentUpon>ProfileMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Root\RecoverPassword.aspx.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\RecoverPassword.aspx.designer.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Sarees.aspx.cs">
+      <DependentUpon>Sarees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Sarees.aspx.designer.cs">
+      <DependentUpon>Sarees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\SubCategory.aspx.cs">
+      <DependentUpon>SubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\SubCategory.aspx.designer.cs">
+      <DependentUpon>SubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\TopWear.aspx.cs">
+      <DependentUpon>TopWear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\TopWear.aspx.designer.cs">
+      <DependentUpon>TopWear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Root\UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Western.aspx.cs">
+      <DependentUpon>Western.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Western.aspx.designer.cs">
+      <DependentUpon>Western.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Wishlist.aspx.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Wishlist.aspx.designer.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Women.aspx.cs">
+      <DependentUpon>Women.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Women.aspx.designer.cs">
+      <DependentUpon>Women.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="css\bootstrap-utilities.css.map" />
+    <Content Include="css\bootstrap-utilities.min.css.map" />
+    <Content Include="css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\bootstrap.rtl.css.map" />
+    <Content Include="css\bootstrap.rtl.min.css.map" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.esm.js.map" />
+    <Content Include="js\bootstrap.esm.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Image\l.webp" />
+    <None Include="packages.config" />
+    <Content Include="Root\AdminMasterPage.Master" />
+    <Content Include="Root\User.Master" />
+    <Content Include="Root\ProfileMasterPage.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52246</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44391/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
