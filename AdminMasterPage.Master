@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="NyraShopping.Root.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Clothes Online Shopping</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link href="~/css/Custome.css" rel="stylesheet" />
+   <link rel="shortcut icon" type="x-icon" class="img-circle" href="../Image/hbl.jpg"/> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url('../Image/skin.jpg'); color:black;font-family:Verdana; font-size:large;">
+    <form id="form1" runat="server">
+        <div>
+            <div class ="navbar navbar-inverse navbar-fixed-top " style="background-color:#000" role ="navigation"  >
+            <div class ="container ">
+                <div class ="navbar-header">
+                    <button type="button" class ="navbar-toggle " data-toggle="collapse"  data-target=".navbar-collapse">
+                        <span class ="sr-only">Toggle navigation</span>
+                        <span class ="icon-bar"></span>
+                        <span class ="icon-bar"></span>
+                        <span class ="icon-bar"></span>
+
+                    </button>
+                    <a class ="navbar-brand" href ="Default.aspx" ></a> <span style="font-style: normal; font-weight: lighter; text-transform: capitalize; color: #fff; font-size: xx-large; font-family: Verdana">
+    <img class="img-circle" src="../Image/hbl.jpg" height="40" /> Clothify</span>
+
+                </div>
+                <div class ="navbar-collapse collapse">
+                    <ul class ="nav navbar-nav navbar-right">
+                        <li><a href ="AdminHome.aspx">Home</a> </li>
+                        <li ><a href="AdminAbout.aspx">About</a> </li>
+                        <li> <a href ="AddProduct.aspx">Add Product</a></li>
+                               
+                            
+
+                        <li class ="drodown" >
+                                     <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Manage <b class ="caret"></b></a> 
+                                     <ul class ="dropdown-menu">
+                                         <li ><a href ="AddBrand.aspx">Add Brand</a> </li>
+                                         <li ><a href ="AddCategory.aspx">Add Category</a> </li>
+                                        <li ><a href ="SubCategory.aspx">Add SubCategory</a> </li>
+                                        <li ><a href ="AddGender.aspx">Add Gender</a> </li>
+                                        <li ><a href ="AddSize.aspx">Add Size</a> </li>
+                                         <li role="separator" class ="divider "></li> 
+                                         <li ><a href ="EditBrand.aspx">Edit Brand</a> </li>
+                                         <li ><a href="EditCategory.aspx">Edit Category</a> </li>
+                                         <li ><a href="EditSubCategory.aspx">Edit SubCategory</a> </li>
+                                         <li ><a href="EditSize.aspx">Edit Size</a> </li>
+                                         <li role="separator" class ="divider "></li> 
+                                         <li ><a href="Report.aspx">Report</a> </li>
+                                      </ul>
+                        </li>
+
+
+
+                        <li >
+
+                            <asp:Button ID="btnAdminlogout" CssClass ="btn btn-danger navbar-btn" style="padding: 5px; border-radius: 10px; border: none" runat="server" Text="Logout" OnClick="BtnAdminlogout_Click" />
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       </div>
+        <!---navbar end--->
+        <div class="container ">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        
+      
+    </form>
+            
+    
+</body>
+</html>
